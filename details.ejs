@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <%- include('../partials/head'); %>
+    </head>
+    <body >
+        <header>
+            <%- include('../partials/header', {username:username}); %>
+        </header>
+        <main class="container ml-1">
+            <h3>this is a sample page of top 100 rated players</h3>
+           <div class="row row-cols-1 row-cols-md-3 g-4">
+
+
+                   <!--                    <img src="..." class="card-img-top" alt="...">-->
+               <%if (player){  %>
+                     <div class="col m-5">
+                        <div class="card"   >
+                                 <div class="card-body">
+                                    <h5 class="card-title"><%= player['player_name']%></h5>
+                                    <p class="card-text">
+                                        <span>Age:<%=player['age']%></span><br>
+                                        <span>Height:<%=player['player_height']%></span><br>
+                                        <span>Weight:<%=player['player_weight']%></span><br>
+                                        <span>College:<%=player['college']%></span><br>
+                                        <span>Country:<%=player['country']%></span><br>
+                                        <span>Draft Year:<%=player['draft_year']%></span><br>
+                                        <span>Draft Round:<%=player['draft_round']%></span><br>
+                                        <span>Draft Number:<%=player['draft_number']%></span><br>
+                                        <span>GP:<%=player['gp']%></span><br>
+                                        <span>Points:<%=player['pts']%></span><br>
+                                        <span>Rebounds:<%=player['reb']%></span><br>
+                                        <span>Assists:<%=player['ast']%></span><br>
+                                        <span>Net rating<%=player['net_rating']%></span><br>
+                                        <span>Oreb Pct:<%=player['oreb_pct']%></span><br>
+                                        <span>Dreb Pct:<%=player['dreb_pct']%></span><br>
+                                        <span>Usg Pct:<%=player['usg_pct']%></span><br>
+                                        <span>Tc Pct:<%=player['ts_pct']%></span><br>
+                                        <span>Ast Pct:<%=player['ast_pct']%></span><br>
+                                        <span>Season:<%=player['season']%></span><br>
+                                        <span>Likes:<%=player['likes']%></span><br>
+
+
+
+                                    </p>
+                                 </div>
+                                </div>
+                   </div>
+               <%}else{%>
+                    <p class="alert alert-danger ">Could not find a record!</p>
+               <%}%>
+
+            </div>
+        </main>
+    </body>
+    <footer>
+            <%- include('../partials/footer'); %>
+    </footer>
+</html>

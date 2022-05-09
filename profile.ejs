@@ -1,0 +1,22 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <%- include('../partials/head'); %>
+    </head>
+    <body class="container">
+        <header>
+            <%- include('../partials/header', {username:username}); %>
+        </header> 
+        
+        <main>
+            <h3> Welcome <%= username %></h3>
+            <p> This is your profile page</p>
+        </main>
+
+        <footer>
+            <%- include('../partials/footer'); %>
+        </footer>
+    </body>
+
+</html>

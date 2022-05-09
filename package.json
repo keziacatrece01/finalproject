@@ -1,0 +1,21 @@
+{
+  "name": "final_project",
+  "version": "1.0.0",
+  "description": "CIS329 Final Project",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bluebird": "^3.7.2",
+    "ejs": "^3.1.7",
+    "express": "^4.17.3",
+    "express-session": "^1.17.2",
+    "nodemon": "^2.0.15",
+    "sqlite3": "^5.0.5"
+  }
+}

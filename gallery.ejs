@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <%- include('../partials/head'); %>
+
+</head>
+<body >
+    <header>
+        <%- include('../partials/header', {username:username}); %>
+    </header>
+    <main class="container ml-1">
+        <h3>Gallery of Players</h3>
+        <div class="form-container">
+              <form class="form">
+                  <input id="search" type="text" class="input" placeholder="search..."/>
+                  <button id="clear" class="clear-results">clear</button>
+              </form>
+        </div>
+       <div class="row row-cols-1 row-cols-md-3 g-4">
+<%if (players){  %>
+<% players.forEach((v,i)=>{ %>
+    <div class="col m-5">
+         <div class="card"   >
+                  <div class="card-body">
+                     <h5 class="card-title"><%= v['player_name']%></h5>
+                     <p class="card-text">
+                         <span>Team: <%=v['team_abbreviation']%></span><br>
+<a href=<%= '/players/details?id='+v["id"]%> class="btn btn-info>">More</a>
+<script>
+  $(nbaplayers.db).ready(function(){
+    $('#MyButton').click(function(){
+       likes();
+    });
+  });
+</script>
+
+
+<input type="button" value="Like" id="MyButton" >
+
+                                    </p>
+                                 </div>
+                                </div>
+                   </div>
+                   <%})%>
+               <%}%>
+
+            </div>
+        </main>
+    </body>
+
+    <footer>
+            <%- include('../partials/footer'); %>
+    </footer>
+</html>
